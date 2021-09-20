@@ -15,14 +15,12 @@ rl.question('Quantidade de alunos? ', (qtdAluno) => {
   for (let x = 0; x <= qtdAluno; x++) {
     if(x == 0){
         console.log("Numero: " + x + " é zero")
-    } else {
-        if (x % 2 == 0) {
-            console.log("Numero: " + x + " é par")
-        } else {
-            console.log("Numero: " + x + " é impar")
-        }
+    } else if (x % 2 == 0) {
+        console.log("Numero: " + x + " é par")
+    } else { 
+        console.log("Numero: " + x + " é impar")
     }
-}
+  }
 });
 
 
