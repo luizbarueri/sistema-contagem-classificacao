@@ -5,14 +5,16 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-const qtdAluno = 0;
-
 rl.question('Quantidade de alunos? ', (qtdAluno) => {
   // TODO: Log the answer in a database
   console.log(`Quantidade de aluno informada: ${qtdAluno}`);
   rl.close();
-  
-  for (let x = 0; x <= qtdAluno; x++) {
+  //chama a function Controle(variavel) passando a qtdAluno para o FOR...
+  Controle(qtdAluno);
+});
+
+function Controle(qtd) {
+  for (let x = 0; x <= qtd; x++) {
     if(x == 0){
         console.log("Numero: " + x + " é zero")
     } else if (x % 2 == 0) {
@@ -21,6 +23,7 @@ rl.question('Quantidade de alunos? ', (qtdAluno) => {
         console.log("Numero: " + x + " é impar")
     }
   }
-});
+}
+
 
 
